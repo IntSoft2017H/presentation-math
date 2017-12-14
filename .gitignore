@@ -6,6 +6,10 @@
 .DS_Store
 Thumbs.db
 
+## Images
+*.png
+*.svg
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
