@@ -8,7 +8,7 @@ if [ $# -lt 1 ]; then
     echo "Example:" ;
     echo "    $0 gamma" ;
     echo "Note:" ;
-    echo "    You should install latexmk ,dvisvgm and dvipng." ;
+    echo "    You should install latexmk and ImageMagick." ;
     echo "    Note that latexmk needs some configurations." ;
     exit 1
 fi
@@ -16,6 +16,4 @@ fi
 set -x
 
 cd "$1"
-TEXINPUTS=".:..:$TEXINPUTS" latexmk
-dvisvgm "$1.dvi"
-dvipng -o "$1.png" "$1.dvi"
+TEXINPUTS=".:..:$TEXINPUTS" latexmk -recorder-
