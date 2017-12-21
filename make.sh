@@ -16,4 +16,4 @@ fi
 set -x
 
 cd "$1"
-TEXINPUTS=".:..:$TEXINPUTS" latexmk -recorder-
+TEXINPUTS=".:..:${TEXINPUTS:-}" latexmk -recorder-
